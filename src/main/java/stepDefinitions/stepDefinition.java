@@ -38,8 +38,7 @@ AddToCart a;
 @Before
 public void initilization() {
 	 LaunchBrowser();
-	 LaunchURL("https://demoqa.com/");
-    driver.manage().window().maximize();
+	 
 }
 @After
 public void end() {
@@ -50,7 +49,8 @@ public void end() {
 
 	@Given("User should open the url")
 	public void user_should_open_the_url() {
-	   
+		LaunchURL("https://demoqa.com/");
+	    driver.manage().window().maximize();
 	    //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	    //driver.findElement(By.xpath("//div[text()=' Login ']")).click();
 		LaunchJavascript();
@@ -449,11 +449,7 @@ public void user_should_click_the_edit_option_and_change_lastname() throws Inter
 
 @Given("User launch open the url")
 public void user_launch_open_the_url() {
-     WebDriverManager.chromedriver().setup();
-	ChromeOptions options=new ChromeOptions();
-	options.addArguments("--remote-allow-origins=*");
-	//options.addArguments("headless");
-    driver=new ChromeDriver(options);
+     
     driver.get("https://demo.cyclos.org/ui/home");
     driver.manage().window().maximize();
     
@@ -602,7 +598,7 @@ public void user_should_enter_the_value_and_click_the_submit_button() {
 	
 }*/@Given("User get the title")
 public void user_get_the_title() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 
@@ -630,7 +626,7 @@ public void user_should_login_the_application() {
 //Choose the fish
 @Given("User launch the url")
 public void user_launch_the_url() {
-	LaunchBrowser();
+
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 }
@@ -653,7 +649,7 @@ public void user_should_choose_the_product() {
 //Choose the Dog
 @Given("User get the current url")
 public void user_get_the_current_url() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 }
@@ -675,7 +671,7 @@ public void user_should_choose_the_dog() {
 //Choose the Cats
 @Given("User Get the url")
 public void user_get_the_url() {
-	LaunchBrowser();
+
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 	GetCurrentURL();
@@ -697,7 +693,7 @@ public void user_should_choose_the_cat() {
 //Choose the Reptiles
 @Given("User Get the title and url")
 public void user_get_the_title_and_url() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 	GetCurrentURL();
@@ -719,7 +715,7 @@ public void user_should_choose_the_reptiles() {
 //Choose the Birds
 @Given("User should get the title")
 public void user_should_get_the_title() {
-	LaunchBrowser();
+
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 	GetCurrentURL();
@@ -741,7 +737,7 @@ public void user_should_choose_the_birds() {
 //Add the fish to cart
 @Given("User get the title for the application")
 public void user_get_the_title_for_the_application() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 	GetCurrentURL();
@@ -766,7 +762,7 @@ public void user_should_choose_add_the_fish_to_cart() {
 //Add the Dog to cart
 @Given("User launch the application")
 public void user_launch_the_application() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 	GetCurrentURL();
@@ -791,7 +787,7 @@ public void user_should_choose_add_the_dog_to_cart() {
 //Add the Cats to cart
 @Given("User launching the url")
 public void user_launching_the_url() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 	GetCurrentURL();
@@ -815,7 +811,7 @@ public void user_should_add_the_cat_to_cart() {
 //Add the Reptiles to cart
 @Given("User launch the url app")
 public void user_launch_the_url_app() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	GetTitle();
 	GetCurrentURL();
@@ -839,7 +835,7 @@ public void user_should_add_the_reptiles_to_cart() {
 //Add the Birds to cart
 @Given("User launching the application url")
 public void user_launching_the_application_url() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 }
 
@@ -862,7 +858,7 @@ public void user_should_add_the_birds_to_cart() {
 //Remove the fish to cart
 @Given("Choose the fish to cart")
 public void choose_the_fish_to_cart() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 }
 
@@ -887,7 +883,7 @@ public void user_remvoe_the_fish_to_cart() {
 //Remove dog to cart
 @Given("Choose the Dog to cart")
 public void choose_the_dog_to_cart() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 }
 
@@ -912,7 +908,7 @@ public void user_remvoe_the_dog_to_cart() {
 //Remove cat in cart
 @Given("Choose the Cat to cart")
 public void choose_the_cat_to_cart() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 }
 
@@ -936,7 +932,7 @@ public void user_remvoe_the_cat_to_cart() {
 //Remove Reptiles in cart
 @Given("Choose the Reptiles to cart")
 public void choose_the_reptiles_to_cart() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 }
 
@@ -960,7 +956,7 @@ public void user_remvoe_the_reptiles_to_cart() {
 //Remove birds in cart
 @Given("Choose the Birds to cart")
 public void choose_the_birds_to_cart() {
-	LaunchBrowser();
+
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 	FrontPage f = new FrontPage();
 	f.getBirds().click();
@@ -985,7 +981,7 @@ public void user_remvoe_the_birds_to_cart() {
 //search the fish
 @Given("Launch the app")
 public void launch_the_app() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 
 }
@@ -1007,7 +1003,7 @@ public void click_the_search_button() {
 //Search the Dog
 @Given("Launch the jpet app")
 public void launch_the_jpet_app() {
-	LaunchBrowser();
+
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 }
 
@@ -1027,7 +1023,7 @@ public void click_the_search() {
 //Search the Cat
 @Given("Launch the pet app")
 public void launch_the_pet_app() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 }
 
@@ -1047,7 +1043,7 @@ public void click_the_search_the() {
 //search the Reptiles
 @Given("Launch the pet application")
 public void launch_the_pet_application() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 
 }
@@ -1068,7 +1064,7 @@ public void click_search_button() {
 //search the Birds
 @Given("Launch the Jpet application")
 public void launch_the_jpet_application() {
-	LaunchBrowser();
+	
 	LaunchURL("https://petstore.octoperf.com/actions/Catalog.action");
 }
 
