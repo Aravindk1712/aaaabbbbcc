@@ -453,7 +453,8 @@ public void user_launch_open_the_url() {
     driver.get("https://demo.cyclos.org/ui/home");
     driver.manage().window().maximize();
     
-    driver.findElement(By.xpath("//div[text()=' Login ']")).click();
+    
+    driver.findElement(By.xpath("//div[contains(text(),'Login')]")).click();
 }
 
 @When("User should enter the {string} and {string}")
@@ -620,7 +621,7 @@ public void user_should_enter_the_password() {
 @Then("User should login the application")
 public void user_should_login_the_application() {
 	l.getLogin().click();
-	driver.quit();
+	
 }
 
 //Choose the fish
@@ -642,7 +643,7 @@ public void user_choose_the_fish() {
 public void user_should_choose_the_product() {
 	ProductPage p = new ProductPage();
 	p.getAngleFish().click();
-	driver.quit();
+	
 
 }
 
@@ -665,7 +666,7 @@ public void user_choose_the_dos() {
 public void user_should_choose_the_dog() {
 	ProductPage p = new ProductPage();
 	p.getBulldog().click();
-	driver.quit();
+	
 }
 
 //Choose the Cats
@@ -687,7 +688,7 @@ public void user_choose_the_cats() {
 public void user_should_choose_the_cat() {
 	ProductPage p= new ProductPage();
 	p.getManxCat().click();
-	driver.quit();
+	
 }
 
 //Choose the Reptiles
@@ -709,7 +710,7 @@ public void user_choose_the_reptiles() {
 public void user_should_choose_the_reptiles() {
 	ProductPage p = new ProductPage();
 	p.getRattlesnakeReptiles().click();
-	driver.quit();
+	
 }
 
 //Choose the Birds
@@ -731,7 +732,7 @@ public void user_choose_the_birds() {
 public void user_should_choose_the_birds() {
 	ProductPage p = new ProductPage();
 	p.getFinchBird().click();
-	driver.quit();
+	
 }
 
 //Add the fish to cart
@@ -755,7 +756,7 @@ public void user_should_choose_add_the_fish_to_cart() {
 	p.getAngleFish().click();
 	AddToCart a = new AddToCart();
 	a.getAddtocart1().click();
-	driver.quit();
+	
 
 }
 
@@ -780,7 +781,7 @@ public void user_should_choose_add_the_dog_to_cart() {
 	p.getBulldog().click();
 	AddToCart a = new AddToCart();
 	a.getAddtocart1().click();
-	driver.quit();
+	
 
 }
 
@@ -805,7 +806,7 @@ public void user_should_add_the_cat_to_cart() {
 	p.getPersianCat().click();
 	AddToCart a = new AddToCart();
 	a.getAddtocart1().click();
-	driver.quit();
+	
 }
 
 //Add the Reptiles to cart
@@ -829,7 +830,7 @@ public void user_should_add_the_reptiles_to_cart() {
 	p.getIguanaReptiles().click();
 	AddToCart a = new AddToCart();
 	a.getAddtocart1().click();
-	driver.quit();
+	
 }
 
 //Add the Birds to cart
@@ -852,7 +853,7 @@ public void user_should_add_the_birds_to_cart() {
 	p.getFinchBird().click();
 	AddToCart a = new AddToCart();
 	a.getAddtocart1().click();
-	driver.quit();
+	
 }
 
 //Remove the fish to cart
@@ -877,7 +878,7 @@ public void user_remvoe_the_fish_to_cart() {
 	
 	AddToCart a= new AddToCart();
 	a.getRemoveCart().click();
-	driver.quit();
+	
 }
 
 //Remove dog to cart
@@ -902,7 +903,7 @@ public void user_add_the_dog_to_cart() {
 public void user_remvoe_the_dog_to_cart() {
 	AddToCart a = new AddToCart();
 	a.getRemoveCart().click();
-	driver.quit();
+	
 }
 
 //Remove cat in cart
@@ -926,7 +927,7 @@ public void user_add_the_cat_to_cart() {
 public void user_remvoe_the_cat_to_cart() {
 	AddToCart a = new AddToCart();
 	a.getRemoveCart().click();
-	driver.quit();
+	
 }
 
 //Remove Reptiles in cart
@@ -950,7 +951,7 @@ public void user_add_the_reptiles_to_cart() {
 public void user_remvoe_the_reptiles_to_cart() {
 	AddToCart a = new AddToCart();
 	a.getRemoveCart().click();
-	driver.quit();
+	
 }
 
 //Remove birds in cart
@@ -975,7 +976,7 @@ public void user_add_the_birds_to_cart() {
 public void user_remvoe_the_birds_to_cart() {
 	AddToCart a = new AddToCart();
 	a.getRemoveCart().click();
-	driver.quit();
+	
 }
 
 //search the fish
@@ -997,7 +998,7 @@ public void enter_the_fish_name() {
 public void click_the_search_button() {
 	AddToCart a = new AddToCart();
 	a.getSubmit().click();
-	driver.quit();
+	
 }
 
 //Search the Dog
@@ -1017,7 +1018,7 @@ public void enter_the_dog_name() {
 public void click_the_search() {
 	AddToCart a = new AddToCart();
 	a.getSubmit().click();
-	driver.quit();
+	
 }
 
 //Search the Cat
@@ -1037,7 +1038,7 @@ public void enter_the_cat_name() {
 public void click_the_search_the() {
 	AddToCart a = new AddToCart();
 	a.getSubmit().click();
-	driver.quit();
+	
 }
 
 //search the Reptiles
@@ -1058,7 +1059,7 @@ public void enter_the_reptiles_name() {
 public void click_search_button() {
 	AddToCart a = new AddToCart();
 	a.getSubmit().click();
-	driver.quit();
+	
 }
 
 //search the Birds
@@ -1078,7 +1079,7 @@ public void enter_the_Birds_name() {
 public void click_search_btn() {
 	AddToCart a = new AddToCart();
 	a.getSubmit().click();
-	driver.quit();
+	
 }
 
 

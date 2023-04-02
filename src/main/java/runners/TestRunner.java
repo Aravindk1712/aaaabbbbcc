@@ -16,7 +16,7 @@ import io.cucumber.junit.Cucumber;
 		features ="src/main/resources/functionalTests",
 		glue= {"stepDefinitions"},
 		
-				 //tags="@smokecheck",
+				tags="@sanitycheck",
 		
 		
 			plugin = {"json:target/cucumber.json"}
