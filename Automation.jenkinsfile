@@ -1,12 +1,19 @@
 pipeline {
     agent any
  stages {
+
+stage ('clone') {
+            steps  {
+                     git clone: 'https://github.com/Aravindk1712/aaaabbbbcc/'
+                   }
+
+
         stage ('checkOut') {
             steps  {
                      git branch: 'main ', credentialsId: 'Git' , url: 'https://github.com/Aravindk1712/aaaabbbbcc/'
                    }
 
-    stages {
+     {
 
         stage('Jar Creation') {
             steps {
