@@ -609,13 +609,13 @@ public void user_get_the_title() {
 public void user_should_enter_the_username() {
 	l = new LoginPage();
 	l.getSignIn().click();
-	l.getUsername().sendKeys("KavithaK_78");
+	l.getUsername().sendKeys("Aravindk1712");
 }
 
 @When("User should enter the password")
 public void user_should_enter_the_password() {
 	l.getPassword().clear();
-	l.getPassword().sendKeys("Kavithak78@");
+	l.getPassword().sendKeys("Aravindk1712");
 }
 
 @Then("User should login the application")
