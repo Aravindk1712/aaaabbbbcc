@@ -5,14 +5,9 @@ pipeline {
 
 
 
-        stage ('checkOut') {
-            steps  {
-                     git branch: 'main ', credentialsId: 'Git' , url: 'https://github.com/Aravindk1712/aaaabbbbcc/'
-                   }
+  
 
-     {
-
-        stage('Jar Creation') {
+         stage('Jar Creation') {
             steps {
                 bat 'mvn clean package assembly:single -Dmaven.test.skip=true'
             }
