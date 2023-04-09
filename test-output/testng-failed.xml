@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="stepDefinitions.stepDefinit">
+        <methods>
+          <include name="validate_the_name3"/>
+          <include name="validate_the_name4"/>
+          <include name="verify_circuit_id"/>
+          <include name="get_response_from_api"/>
+          <include name="validate_the_name2"/>
+          <include name="validate_the_url"/>
+          <include name="verify_the_country"/>
+          <include name="verify_the_circuiName"/>
+          <include name="validate_the_response_code"/>
+          <include name="verify_the_circuit_name"/>
+          <include name="verify_series"/>
+          <include name="validate_the_url2"/>
+          <include name="validate_the_name"/>
+          <include name="verify_the_locality"/>
+        </methods>
+      </class> <!-- stepDefinitions.stepDefinit -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

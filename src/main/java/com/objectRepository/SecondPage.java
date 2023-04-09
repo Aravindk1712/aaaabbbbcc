@@ -130,4 +130,91 @@ import org.openqa.selenium.support.PageFactory;
 		public WebElement getsubmit81() {
 			return submit81;
 		}
+		@FindBy(xpath="//input[@id='user-name']")
+		private WebElement username;
+		public WebElement getusername() {
+			return username;
+				
+			}
+		@FindBy(xpath="//input[@id='password']")
+		private WebElement passWord;
+		public WebElement getpassWord() {
+			return passWord;
+			
+
+		}
+		@FindBy(xpath="//input[@id='login-button']")
+
+		private WebElement submit;
+		public WebElement getsubmit() {
+			return submit ;
+			
+
+		}
+
+		@FindBy(xpath="//button[@id='add-to-cart-sauce-labs-backpack']")
+
+		private WebElement addtoCart;
+		public WebElement getaddtoCart() {
+			return addtoCart ;
+			
+
+		}
+		@FindBy(xpath="//a[@class='shopping_cart_link']")
+
+		private WebElement shoppingCart;
+		public WebElement getshoppingCart() {
+			return shoppingCart ;
+			
+
+		}
+
+		@FindBy(xpath="//button[@id='checkout']")
+
+		private WebElement mediumCheckout;
+		public WebElement getmediumCheckout() {
+			return mediumCheckout ;
+			
+
+		}
+		@FindBy(xpath="//input[@id='first-name']")
+
+		private WebElement firstName;
+		public WebElement getfirstName() {
+			return firstName ;
+			
+
+		}
+		@FindBy(xpath="//input[@id='last-name']")
+
+		private WebElement lastName;
+		public WebElement getlastName() {
+			return lastName ;
+			
+
+		}
+		@FindBy(xpath="//input[@id='postal-code']")
+
+		private WebElement zipCode;
+		public WebElement getzipCode() {
+			return zipCode ;
+			
+
+		}
+		@FindBy(xpath="//input[@id='continue']")
+
+		private WebElement continue2;
+		public WebElement getcontinue2() {
+			return continue2 ;
+			
+
+		}
+		@FindBy(xpath="//div[text()='SauceCard #31337']")
+
+		private WebElement print;
+		public WebElement getprint() {
+			return print ;
+			
+
+		}
 }

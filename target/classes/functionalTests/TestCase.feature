@@ -414,6 +414,63 @@ Scenario: login the application
     Given Launch the Jpet application
     When Enter the Birds name
     Then click search button
+    
+    @katalonsmoke
+  Scenario Outline: verify login at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    Then user should click login  and logout
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+    
+    @smoke
+    Scenario Outline: verify Appoinment at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    When user should click login
+    Then user should enter all the details and book appoinment
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+  
+   Scenario Outline: verify Home page at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    When user should click login
+    Then user should click home button
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+  
+  @smoke
+   Scenario Outline: verify history at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    When user should click login
+    Then user should click history button
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+  
+  @smoke
+    Scenario Outline: verify prifile at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    When user should click login
+    Then user should click profile button
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+    
+  @smoke
+    Scenario Outline:
+Given user launch the browser and open the Url
+When user enter the username and password
+And user should click add to cart option 
+Then User should enter all the details and click checkout button
+
+   
 
 
 

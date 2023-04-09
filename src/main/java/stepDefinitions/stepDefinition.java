@@ -1,5 +1,6 @@
 package stepDefinitions;
 import java.awt.AWTException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import io.cucumber.java.After;
@@ -8,12 +9,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import objectReposiory.sauceDemo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import com.objectRepository.AddToCart;
 import com.objectRepository.DemoQa;
@@ -1081,6 +1084,125 @@ public void click_search_btn() {
 	a.getSubmit().click();
 	
 }
+@Given("user should open the browser")
+public void user_should_open_the_browser() throws IOException {
+	LaunchBrowser();
+	LaunchURL("https://katalon-demo-cura.herokuapp.com/");
+	driver.manage().window().maximize();
+	//TakeScreenShot();
+    
+}
+@When("user should enter the {string} and {string}")
+public void user_should_enter_the_and(String User, String pass) {
+	driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
+	driver.findElement(By.xpath("//a[normalize-space()='Login']")).click();
+	driver.findElement(By.xpath("//input[@id='txt-username']")).sendKeys(User);
+	driver.findElement(By.xpath("//input[@id='txt-password']")).sendKeys(pass);
+  
+}
+@Then("user should click login  and logout")
+public void user_should_click_login_and_logout() {
+	driver.findElement(By.xpath("//button[@id='btn-login']")).click();
+	driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
+	driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
+	driver.close();
+  
+}
+
+@When("user should click login")
+public void user_should_click_login() {
+	driver.findElement(By.xpath("//button[@id='btn-login']")).click();
+}
+@Then("user should enter all the details and book appoinment")
+public void user_should_enter_all_the_details_and_book_appoinment() {
+    Select obj=new Select(driver.findElement(By.xpath("//select[@id='combo_facility']")));
+    obj.selectByValue("Hongkong CURA Healthcare Center");
+    driver.findElement(By.xpath("//input[@id='radio_program_medicaid']")).click();
+    driver.findElement(By.xpath("//input[@id='txt_visit_date']")).sendKeys("11/04/2023");
+    driver.findElement(By.xpath("//textarea[@id='txt_comment']")).sendKeys("newdetailsentered");
+    driver.findElement(By.xpath("//button[@id='btn-book-appointment']")).click();
+    
+    driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
+	driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
+	driver.close();
+    
+    
+}
+
+@Then("user should click home button")
+public void user_should_click_home_button() {
+driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
+driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
+driver.close();
+}
+@Then("user should click history button")
+public void user_should_click_history_button() {
+driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
+driver.findElement(By.xpath("//a[normalize-space()='History']")).click();
+driver.close();
+
+}
+@Then("user should click profile button")
+public void user_should_click_profile_button() {
+driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
+driver.findElement(By.xpath("//a[normalize-space()='Profile']")).click();
+driver.close();
+
+
+}
+@Given("user launch the browser and open the Url")
+public void user_launch_the_browser_and_open_the_url() {
+//WebDriverManager.chromedriver().setup();
+//WebDriverManager.chromedriver().setup();
+//ChromeOptions options=new ChromeOptions();
+//options.addArguments("--remote-allow-origins=*");
+////options.addArguments("headless");
+	LaunchBrowser();
+//driver=new ChromeDriver(options);
+LaunchURL("https://www.saucedemo.com/");
+driver.manage().window().maximize();
+}
+ 
+@When("user enter the username and password")
+public void user_enter_the_username_and_password() {
+	s=new sauceDemo();
+     s.getusername().sendKeys("standard_user");
+	s.getpassWord().sendKeys("secret_sauce");
+	s.getsubmit().click();
+    
+}
+@When("user should click add to cart option")
+public void user_should_click_add_to_cart_option() {
+	s.getaddtoCart().click();
+	s.getshoppingCart().click();
+	s.getmediumCheckout().click();
+	
+			
+   
+}
+@Then("User should enter all the details and click checkout button")
+public void user_should_enter_all_the_details_and_click_checkout_button() {
+	s.getfirstName().sendKeys("Arav");
+	s.getlastName().sendKeys("kkkk");
+	s.getzipCode().sendKeys("600100");
+	
+s.getcontinue2().click();
+s.getprint().getText();
+driver.close();
+	
+    
+}
+
+
+
+
+
+
+
+
+
+}
+
 
 
 
@@ -1091,4 +1213,4 @@ public void click_search_btn() {
 
 
 
-}
+
