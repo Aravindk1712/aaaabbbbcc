@@ -1085,7 +1085,7 @@ public void click_search_btn() {
 }
 @Given("user should open the browser")
 public void user_should_open_the_browser() throws IOException {
-	LaunchBrowser();
+	
 	LaunchURL("https://katalon-demo-cura.herokuapp.com/");
 	driver.manage().window().maximize();
 	//TakeScreenShot();
@@ -1104,7 +1104,7 @@ public void user_should_click_login_and_logout() {
 	driver.findElement(By.xpath("//button[@id='btn-login']")).click();
 	driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
 	driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
-	driver.close();
+	
   
 }
 
@@ -1123,7 +1123,7 @@ public void user_should_enter_all_the_details_and_book_appoinment() {
     
     driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
 	driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
-	driver.close();
+	
     
     
 }
@@ -1132,20 +1132,20 @@ public void user_should_enter_all_the_details_and_book_appoinment() {
 public void user_should_click_home_button() {
 driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
 driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-driver.close();
+
 }
 @Then("user should click history button")
 public void user_should_click_history_button() {
 driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
 driver.findElement(By.xpath("//a[normalize-space()='History']")).click();
-driver.close();
+
 
 }
 @Then("user should click profile button")
 public void user_should_click_profile_button() {
 driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
 driver.findElement(By.xpath("//a[normalize-space()='Profile']")).click();
-driver.close();
+
 
 
 }
@@ -1156,7 +1156,7 @@ public void user_launch_the_browser_and_open_the_url() {
 //ChromeOptions options=new ChromeOptions();
 //options.addArguments("--remote-allow-origins=*");
 ////options.addArguments("headless");
-	LaunchBrowser();
+	
 //driver=new ChromeDriver(options);
 LaunchURL("https://www.saucedemo.com/");
 driver.manage().window().maximize();
@@ -1187,7 +1187,7 @@ public void user_should_enter_all_the_details_and_click_checkout_button() {
 	
 s.getcontinue2().click();
 s.getprint().getText();
-driver.close();
+
 	
     
 }

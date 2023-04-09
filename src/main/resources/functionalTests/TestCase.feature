@@ -424,7 +424,7 @@ Scenario: login the application
   |User    |pass              |
   |John Doe|ThisIsNotAPassword|
     
-    @smoke
+    @katalonsmoke
     Scenario Outline: verify Appoinment at katalon website
     Given user should open the browser
     When user should enter the "<User>" and "<pass>"
@@ -434,6 +434,7 @@ Scenario: login the application
   |User    |pass              |
   |John Doe|ThisIsNotAPassword|
   
+  @katalonsmoke
    Scenario Outline: verify Home page at katalon website
     Given user should open the browser
     When user should enter the "<User>" and "<pass>"
@@ -443,7 +444,7 @@ Scenario: login the application
   |User    |pass              |
   |John Doe|ThisIsNotAPassword|
   
-  @smoke
+@katalonsmoke
    Scenario Outline: verify history at katalon website
     Given user should open the browser
     When user should enter the "<User>" and "<pass>"
@@ -453,7 +454,7 @@ Scenario: login the application
   |User    |pass              |
   |John Doe|ThisIsNotAPassword|
   
-  @smoke
+  @katalonsmoke
     Scenario Outline: verify prifile at katalon website
     Given user should open the browser
     When user should enter the "<User>" and "<pass>"
