@@ -1,20 +1,19 @@
 package stepDefinitions;
 import java.awt.AWTException;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
+
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import objectReposiory.sauceDemo;
+
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -1093,7 +1092,7 @@ public void user_should_open_the_browser() throws IOException {
     
 }
 @When("user should enter the {string} and {string}")
-public void user_should_enter_the_and(String User, String pass) {
+public void user_should_enter_the_and1(String User, String pass) {
 	driver.findElement(By.xpath("//i[@class='fa fa-bars']")).click();
 	driver.findElement(By.xpath("//a[normalize-space()='Login']")).click();
 	driver.findElement(By.xpath("//input[@id='txt-username']")).sendKeys(User);
@@ -1165,7 +1164,7 @@ driver.manage().window().maximize();
  
 @When("user enter the username and password")
 public void user_enter_the_username_and_password() {
-	s=new sauceDemo();
+	
      s.getusername().sendKeys("standard_user");
 	s.getpassWord().sendKeys("secret_sauce");
 	s.getsubmit().click();
