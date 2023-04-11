@@ -1,14 +1,14 @@
 package stepDefinitions;
 import java.awt.AWTException;
 import java.io.IOException;
+import java.util.List;
 
-
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 
 
 import org.openqa.selenium.By;
@@ -1163,34 +1163,145 @@ driver.manage().window().maximize();
 }
  
 @When("user enter the username and password")
-public void user_enter_the_username_and_password() {
+public void user_enter_the_username_and_password(DataTable credential) {
 	
-     s.getusername().sendKeys("standard_user");
-	s.getpassWord().sendKeys("secret_sauce");
+	List<List<String>> data = credential.asLists(String.class);
+     s.getusername().sendKeys(data.get(0).get(0));
+	s.getpassWord().sendKeys(data.get(1).get(1));
 	s.getsubmit().click();
     
 }
-@When("user should click add to cart option")
+//@When("user should click add to cart option")
+//public void user_should_click_add_to_cart_option() {
+//	driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-backpack']")).click();
+//	//s.getaddtoCart().click();
+//	s.getshoppingCart().click();
+//	s.getmediumCheckout().click();
+//	
+//			
+//   
+//}
+@When("user should click add to  cart option")
 public void user_should_click_add_to_cart_option() {
 	s.getaddtoCart().click();
 	s.getshoppingCart().click();
 	s.getmediumCheckout().click();
-	
-			
-   
 }
+
+
 @Then("User should enter all the details and click checkout button")
-public void user_should_enter_all_the_details_and_click_checkout_button() {
-	s.getfirstName().sendKeys("Arav");
-	s.getlastName().sendKeys("kkkk");
-	s.getzipCode().sendKeys("600100");
+public void user_should_enter_all_the_details_and_click_checkout_button(DataTable inform) {
+	
+	List<List<String>> data = inform.asLists(String.class);
+	
+
+	s.getfirstName().sendKeys(data.get(0).get(0));
+	s.getlastName().sendKeys(data.get(0).get(1));
+	s.getzipCode().sendKeys(data.get(0).get(2));
 	
 s.getcontinue2().click();
-s.getprint().getText();
+//s.getprint().getText();
 
 	
     
 }
+
+@When("user should click sauce lab Bolt Tshirt option")
+public void user_should_click_sauce_lab_bolt_tshirt_option() {
+   driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-bike-light']")).click();
+   s.getshoppingCart().click();
+	s.getmediumCheckout().click();
+}
+@Then("User should enter all the necessary details and click checkout button")
+public void user_should_enter_all_the_necessary_details_and_click_checkout_button(DataTable info ) {
+   
+List<List<String>> data = info.asLists(String.class);
+	
+
+	s.getfirstName().sendKeys(data.get(0).get(0));
+	s.getlastName().sendKeys(data.get(0).get(1));
+	s.getzipCode().sendKeys(data.get(0).get(2));
+	
+s.getcontinue2().click();
+//s.getprint().getText();
+
+}
+
+@When("user should click sauce labs bike light option")
+public void user_should_click_sauce_labs_bike_light_option() {
+    driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-bolt-t-shirt']")).click();
+    s.getshoppingCart().click();
+ 	s.getmediumCheckout().click();
+}
+@Then("User should enter all the new  details and click checkout button")
+public void user_should_enter_all_the_new_details_and_click_checkout_button(DataTable dataTable) {
+	List<List<String>> data = dataTable.asLists(String.class);
+	s.getfirstName().sendKeys(data.get(0).get(0));
+	s.getlastName().sendKeys(data.get(0).get(1));
+	s.getzipCode().sendKeys(data.get(0).get(2));
+	
+s.getcontinue2().click();
+//s.getprint().getText();
+
+}
+
+@When("user should click sauce labs fleece jacket option")
+public void user_should_click_sauce_labs_fleece_jacket_option() {
+	 driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-fleece-jacket']")).click();
+	 s.getshoppingCart().click();
+		s.getmediumCheckout().click();
+    
+}
+@Then("User should enter all the secondary   details and click checkout button")
+public void user_should_enter_all_the_secondary_details_and_click_checkout_button(DataTable Table) {
+	List<List<String>> data = Table.asLists(String.class);
+	s.getfirstName().sendKeys(data.get(0).get(0));
+	s.getlastName().sendKeys(data.get(0).get(1));
+	s.getzipCode().sendKeys(data.get(0).get(2));
+	
+s.getcontinue2().click();
+//s.getprint().getText();
+
+}
+@When("user should click sauce labs one sie option")
+public void user_should_click_sauce_labs_one_sie_option() {
+  
+	 driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-onesie']")).click();
+	 s.getshoppingCart().click();
+		s.getmediumCheckout().click();
+}
+@Then("User should enter all the third customer   details and click checkout button")
+public void user_should_enter_all_the_third_customer_details_and_click_checkout_button(DataTable Tabl) {
+	List<List<String>> data = Tabl.asLists(String.class);
+	s.getfirstName().sendKeys(data.get(0).get(0));
+	s.getlastName().sendKeys(data.get(0).get(1));
+	s.getzipCode().sendKeys(data.get(0).get(2));
+	
+s.getcontinue2().click();
+//s.getprint().getText();
+
+}
+
+@When("user should click sauce lab red shirt  option")
+public void user_should_click_sauce_lab_red_shirt_option() {
+	 driver.findElement(By.xpath("//button[@id='add-to-cart-test.allthethings()-t-shirt-(red)']")).click();
+	 s.getshoppingCart().click();
+		s.getmediumCheckout().click();
+}
+@Then("User should enter all the fourth customer   details and click checkout button")
+public void user_should_enter_all_the_fourth_customer_details_and_click_checkout_button(DataTable dataT) {
+   
+	
+	List<List<String>> data = dataT.asLists(String.class);
+	s.getfirstName().sendKeys(data.get(0).get(0));
+	s.getlastName().sendKeys(data.get(0).get(1));
+	s.getzipCode().sendKeys(data.get(0).get(2));
+	
+s.getcontinue2().click();
+//s.getprint().getText();
+
+}
+
 
 
 
