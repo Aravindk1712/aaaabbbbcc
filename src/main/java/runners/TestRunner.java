@@ -15,8 +15,9 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(
 		features ="src/main/resources/functionalTests",
 		glue= {"stepDefinitions"},
+		dryRun=true,
 		
-				tags="@katalonsmoke",
+				//tags="@katalonsmoke",
 		
 		
 			plugin = {"json:target/cucumber.json"}

@@ -1,4 +1,4 @@
-Feature: Validating the demoqa&Cycl& website page
+Feature: Validating the demoqa&Cyclos & XYZ framework website page
 
 @smoke
 Scenario Outline: verify the elements in Demoqa 
@@ -70,6 +70,106 @@ Given User should open the url
 When User should click the element button
 And User should click the button option
 And User should click the Rightclick option 
+
+
+@smoke
+Scenario Outline: verify the Demoqa link option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the notfound option 
+
+
+
+@smokecheck3
+Scenario Outline: verify the Demoqa link option 
+
+Given User should open the url
+When User should click the element button
+And User should click the brokenlink option
+And User should click the brokenlink  
+
+@sanity
+Scenario Outline: verify the Demoqa  valid link option 
+
+Given User should open the url
+When User should click the element button
+And User should click the brokenlink option
+And User should click the validlink  
+
+
+@sanity
+Scenario Outline: verify the Demoqa link option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the forbidden option
+
+@sanity
+Scenario Outline: verify the Demoqa link option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the unauthorized option
+
+@sanity
+Scenario Outline: verify the Demoqa link option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the created option
+
+
+@sanity
+Scenario Outline: verify the Demoqa link option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the nocontent option
+
+
+@sanity
+Scenario Outline: verify the Demoqa move option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the moved option
+
+
+@sanity
+Scenario Outline: verify the Demoqa badrequest option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the badrequest option
+
+
+
+@sanity
+Scenario Outline: verify the Demoqa Home  option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the home option
+
+
+@sanity
+Scenario Outline: verify the homevPSkr Home  option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the homevPSkr option
+
+
 
 
 @smoke
@@ -470,6 +570,66 @@ Given user launch the browser and open the Url
 When user enter the username and password
 And user should click add to cart option 
 Then User should enter all the details and click checkout button
+
+  @katalonsmoke
+  Scenario Outline: verify login at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    Then user should click login  and logout
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+    
+    @katalonsmoke
+    Scenario Outline: verify Appoinment at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    When user should click login
+    Then user should enter all the details and book appoinment
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+  
+  @katalonsmoke
+   Scenario Outline: verify Home page at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    When user should click login
+    Then user should click home button
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+  
+@katalonsmoke
+   Scenario Outline: verify history at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    When user should click login
+    Then user should click history button
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+  
+  @katalonsmoke
+    Scenario Outline: verify prifile at katalon website
+    Given user should open the browser
+    When user should enter the "<User>" and "<pass>"
+    When user should click login
+    Then user should click profile button
+  Examples: 
+  |User    |pass              |
+  |John Doe|ThisIsNotAPassword|
+    
+  @smoke
+    Scenario Outline:
+Given user launch the browser and open the Url
+When user enter the username and password
+And user should click add to cart option 
+Then User should enter all the details and click checkout button
+
+
+
+
 
    
 
